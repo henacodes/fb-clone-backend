@@ -1,0 +1,40 @@
+###
+POST  http://localhost:8000/users/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"user4321",
+    "password":"admin"
+}
+
+
+###
+POST  http://localhost:8000/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"user4321",
+    "password":"admin"
+}
+
+###
+GET http://localhost:8000/users/me HTTP/1.1
+Authorization: TOKEN eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXI0MzIxIiwiaWF0IjoxNjQ3MTAyMTg0fQ.ic0Ldsaf6KDoasznm_DWygy-rEsI9uTkcQxGBNU1YOY
+
+
+
+###
+POST http://localhost:8000/posts/create HTTP/1.1
+Authorization: TOKEN eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXI0MzIxIiwiaWF0IjoxNjQ1NjAzOTcwfQ.ZnxGbtB_0E6RHIb3b67rbxqFvGnYCLuuDvZejeXDsWM
+Content-Type: application/json
+
+{
+   "caption":"first post and I am excited"
+}
+###
+GET http://localhost:8000/utils/getAvatar/ HTTP/1.1
+Authorization: TOKEN eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXI0MzIxIiwiaWF0IjoxNjQ3MjgyNDE0fQ.Q63EWBWZA3AAOvN2tsY_z1o6P6IhHR3lqUWbfE_FQ1U
+
+###
+DELETE http://localhost:8000/posts/delete/6215ecee97ef451d10a58d17
+Authorization: TOKEN eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXI0MzIxIiwiaWF0IjoxNjQ1NjAzOTcwfQ.ZnxGbtB_0E6RHIb3b67rbxqFvGnYCLuuDvZejeXDsWM
