@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 app.use("/utils", utilsRoutes);
-const port = process.env.PORT;
+const port = process.env.port;
 const mongoURI = process.env.MONGO_URI;
 const conn = mongoose.connect(
   mongoURI,
